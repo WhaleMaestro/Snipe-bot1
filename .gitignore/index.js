@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 // import bot setting (data)
 const prefix = settings.prefix;
-const token = process.env.TOKEN;
+const token = settings.token;
 const owner = settings.owner;
 
 //read commands files
@@ -57,15 +57,6 @@ bot.on("message",msg => {
     }
 });
 
-
-bot.on("ready", function() {
-    bot.user.setGame("!snipe for infos");
-    console.log("Le bot a bien été connécté");
-});
-
-bot.on('error', err =>{
-    console.log(err);
-});
 
 
 bot.login(token);
