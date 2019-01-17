@@ -2,11 +2,6 @@
 const Discord = require('discord.js');
 const settings = require('./settings.json');
 const fs = require('fs');
-require('dotenv/config');
-const http = require('http');
-const port = process.env.PORT || 3000;
-// Simple Server
-http.createServer().listen(port);
 
 // initialise are bot
 const bot = new Discord.Client();
